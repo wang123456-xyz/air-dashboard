@@ -7,10 +7,69 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>绵阳市空气质量监测可视化大屏</h1>
-  </header>
-  <main></main>
-  <footer></footer>
+  <div class="dashboard">
+    <header class="topbar">
+      <h1>绵阳市空气质量检测可视化大屏</h1>
+      <div class="topbar-meta">
+        <span>2026-11-27</span>
+        <span>数据来源：绵阳市生态管理局</span>
+      </div>
+    </header>
+    <section class="kpi-card">
+      <div class="kpi-card">
+        <span class="kpi-label">全市平均AQI</span>
+        <strong class="kpi-value">125</strong>
+         <span class="kpi-sub">轻度污染</span>
+      </div>
+      <div class="kpi-card">
+         <span class="kpi-label">PM2.5均值</span>
+        <strong class="kpi-value">92</strong>
+         <span class="kpi-sub">ug/m^3</span>
+      </div>
+      <div class="kpi-card">
+         <span class="kpi-label">PM10均值</span>
+        <strong class="kpi-value">148</strong>
+         <span class="kpi-sub">ug/m^3</span>
+      </div>
+      <div class="kpi-card">
+         <span class="kpi-label">O<sub>3</sub>8h均值</span>
+        <strong class="kpi-value">86</strong>
+         <span class="kpi-sub">ug/m^3</span>
+      </div>
+    </section>
+    <section class="main-panel">
+      <div class="chart-box" id="map-chart">图表位：站点分布地图</div>
+     <div class="chart-box" id="trend-chart">图表位:24小时AQI趋势</div>
+    </section>
+    <aside class="rank-panel">
+      <h2>站点AQI排行</h2>
+      <ol class="rank-list">
+        <li><span class=rank-name>三台站</span><span class="rank-bar"></span><span class="rank-value">154</span></li>
+        <li><span class=rank-name>游仙站</span><span class="rank-bar"></span><span class="rank-value">132</span></li>
+        <li><span class=rank-name>江油站</span><span class="rank-bar"></span><span class="rank-value">112</span></li>
+        <li><span class=rank-name>高新站</span><span class="rank-bar"></span><span class="rank-value">96</span></li>
+        <li><span class=rank-name>安州站</span><span class="rank-bar"></span><span class="rank-value">87</span></li>
+      </ol>
+    </aside>
+    <section class="table-panel">
+      <h2>监测站点明细</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>站点</th><th>AQI</th><th>PM2.5</th><th>PM10</th><th>首要污染物</th><th>等级</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>涪城站</td><td>168</td><td>126</td><td>182</td><td>PM2.5</td><td>中度污染</td></tr>
+          <tr><td>三台站</td><td>154</td><td>112</td><td>166</td><td>PM2.5</td><td>中度污染</td></tr>
+          <tr><td>游仙站</td><td>132</td><td>98</td><td>151</td><td>PM2.5</td><td>轻度污染</td></tr>
+          <tr><td>江油站</td><td>112</td><td>84</td><td>139</td><td>PM10</td><td>轻度污染</td></tr>
+          <tr><td>高新站</td><td>96</td><td>68</td><td>122</td><td>PM10</td><td>良</td></tr>
+          <tr><td>安州站</td><td>87</td><td>61</td><td>114</td><td>PM10</td><td>良</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  
 </body>
 </html>
