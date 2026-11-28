@@ -1,0 +1,50 @@
+:root{
+    --bg:#0a1726;
+    --panel:#11253d;
+    --line:rgba(0,212,255,0.16);
+    --text:#c9d8e8;
+    --muted:#7d96ad;
+    --accent:#00d4ff;
+}
+html,
+body{
+    heigt:100%;
+}
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-samily:"PingFang SC","Microsort YaHei",sans-serif;
+}
+.dashboard{
+    height:100vh;
+    padding:16px;
+    display:grid;
+    grid-template-columns:300px 1fr 320px;
+    grid-template-rows:64px 1fr 220px;
+    grid-template-areas:
+    "topbar topbar topbar"
+    "kpis main rank"
+    "table table table";
+    gap:16px;
+}
+.topbar{grid-area:topbar;}
+.kpi-list{grid-area:kpis;}
+.main-panel{grid-area:main;}
+.rank-panel{grid-area:rank;}
+.table-panel{grid-area:table;}
+.topbar,
+.kpi-list,
+.main-panel,
+.rank-panel
+.table-panel
+{
+border:1px dashed rgba(0,212,255,0.35);
+border-radius:6px;
+padding:8px;
+}
+.kpi-list,
+.main-panel{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
